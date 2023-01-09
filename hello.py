@@ -1,3 +1,4 @@
-#한글도 동작은 하지만
-#쓰고나면 다시 영문모드로 바꾸기!!
-print('hello')
+# Set username
+username='김하냥'
+print('Hello',username)
+# Print greeting with username

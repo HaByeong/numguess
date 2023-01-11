@@ -1,14 +1,15 @@
 from random import randint
 from time import sleep
-#Make answer
-answer=randint(1,100)
-#Think your user_num(1~100)
-user_name=input("What's is your name?")
+def start_line():
+  #Make answer
+  answer=randint(1,100)
+  #Get user_name
+  user_name=input("What is your name?")
+  print(f"Hi!, {user_name}! Please be my guest!!")
+  #Get and print User's guess
+  guess=int(input(f"So {user_name}, Guess the number(1~100): "))
+  return answer, user_name, guess
 
-print(f"Hi!,{user_name}! Please be my guest!!")
-#Get and print User's guess
-guess = int(input(f"So {user_name}, Guess the number(1~100): "))
-#Compare answer with user's guess
 if guess == answer:
     print('*****************')
     sleep(1)

@@ -26,14 +26,16 @@ def compare_line(guess,answer):
     print(f"You lose~! So sad...answer is~~{answer}!")
     return "lose"
 score=0
-#Use function
-answer,user_name,guess=start_line()
-result=compare_line(guess,answer)
-#Score system
-if(result=="win"):
-    score+=10000
-elif(result=="lose"):
-    score-=50
-print(f"Your score is {score}!")
-
+play_time=int(input("Choose play time!"))
+for i in range(play_time):
+  #Use function
+  answer,user_name,guess=start_line()
+  result=compare_line(guess,answer)
+  #Score system
+  if(result=="win"):
+      score+=10000
+  elif(result=="lose"):
+      score-=50
+  print(f"Your score is {score}!")
+print("Game is finish~Good bye!")
 

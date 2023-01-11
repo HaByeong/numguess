@@ -10,18 +10,15 @@ def start_line():
   guess=int(input(f"So {user_name}, Guess the number(1~100): "))
   return answer, user_name, guess
 
-if guess == answer:
-    print('*****************')
-    sleep(1)
-    print('*****************')
-    sleep(1)
-    print('*****************')
-    sleep(1)
+def compare_line(guess,answer):
+  if guess == answer:
+    for i in range(3):
+      print('*****************')
+      sleep(1)
     print(f"You got it right!!!! The answer is {answer}!!")
-elif(answer>guess):
-  print(f"That's too small..{user_name}")
-  print(f"You lose~! So sad...answer is~~{answer}!")
-elif(answer<guess):
-  print(f"That's too big..{user_name}")
-  print(f"You lose~! So sad...answer is~~{answer}!")
-
+  elif(answer>guess):
+    print(f"That's too small..{user_name}")
+    print(f"You lose~! So sad...answer is~~{answer}!")
+  elif(answer<guess):
+    print(f"That's too big..{user_name}")
+    print(f"You lose~! So sad...answer is~~{answer}!") 
